@@ -1,0 +1,338 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: darkgreen;
+    padding: 15px;
+    color: white;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: darkgreen;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: darkgreen;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkgreen
+}
+/* About Me Section Styling */
+#about {
+    background: #ffffff;
+    margin: 20px auto;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px darkgreen;
+    max-width: 800px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: darkgreen;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+
+#about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Skills Section */
+#skills {
+    background: linear-gradient(to right, darkgreen, #005000); /* Dark green gradient */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#skills h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-list li {
+    background: white;
+    color: darkgreen;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 50, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.skills-list li:hover {
+    transform: scale(1.1);
+    background: darkgreen;
+    color: white;
+}
+
+/* Hide all sections except the default one */
+.content-section {
+    display: none;
+}
+#experience {
+    background-color: #f8f9fa; /* Light background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px darkgreen;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#experience h2 {
+    font-size: 28px;
+    color: darkgreen;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#experience p {
+    font-size: 18px;
+    color: black;
+    line-height: 1.6;
+    font-weight: 400;
+    padding: 10px;
+}
+
+/* Education Section */
+#education {
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px darkgreen;
+}
+
+#education h2 {
+    font-size: 28px;
+    color: darkgreen;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-bottom: 3px solid darkgreen;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#education p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.education-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.education-list li {
+    font-size: 18px;
+    color: #222;
+    background: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education-list li strong {
+    color: black;
+    font-size: 20px;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px darkgreen;
+}
+
+#projects h2 {
+    font-size: 28px;
+    color: darkgreen;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#projects p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list li {
+    font-size: 18px;
+    color: #222;
+    background: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure the body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the main content take up all available space */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer styling */
+footer {
+    background-color: darkgreen;
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    border-top: 3px solid #fff;
+    width: 100%;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelly's Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h1>RWEMA'S RESUME</h1>
+            <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
+                <li><a href="#experience" onclick="showSection('experience')">Experience</a></li>
+                <li><a href="#education" onclick="showSection('education')">Education</a></li>
+                <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sections -->
+    <main>
+        <section id="about" class="content-section">
+            <h2><u>About Me</u></h2>
+            <p>Hi! I'm Gisa, a passionate and curious student currently exploring the world of software engineering. I enjoy learning new technologies, solving
+            problems, and working on creative projects. My goal is to sharpen my skills and grow as a developer while building meaningful solutions.</p>
+        </section>
+        
+        <section id="skills" class="content-section">
+            <h2><u>Skills</u></h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+                <li>Git & GitHub</li>
+                <li>Problem-solving</li>
+                <li>Creativity</li>
+            </ul>
+        </section>
+        
+        
+        <section id="experience" class="content-section">
+            <h2><u>Work Experience</u></h2>
+            <p>During my studies, I had the opportunity to complete an internship at IDA Technology, where I gained hands-on experience in a professional tech environment. This experience allowed me to strengthen my problem-solving skills and understand real-world 
+                applications of software development. While I’m still learning, I’m eager to continue growing and building my expertise in the field.</p>
+        </section>
+        
+        <section id="education" class="content-section">
+            <h2>Education</h2>
+        <p>I am currently pursuing a degree in Software Engineering at ALU, where I am expanding my knowledge in web development, algorithms, and problem-solving. Before that, I completed my studies at SOS Technical High School, specializing in software development. My education 
+            has provided me with a strong foundation in coding and logical thinking, and I am eager to apply my skills in real-world projects.</p>
+            
+        </section>
+        
+        <section id="projects" class="content-section">
+            <h2><u>Project Section</u></h2>
+            <p>As a Software Engineering student, I am continuously honing my skills by working on various small projects and assignments. While I haven’t yet tackled large-scale projects, I’ve developed a basic portfolio website, a simple calculator using JavaScript, and several Linux 
+                shell scripts to automate tasks. I’m always looking for ways to improve and am excited to take on more complex projects in the future.</p>
+        </section>
+        
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        
+        
+    </main>
+    
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("active");
+        }
+
+        function showSection(sectionId) {
+            document.querySelectorAll(".content-section").forEach(section => {
+                section.style.display = "none";
+            });
+            document.getElementById(sectionId).style.display = "block";
+        }
+
+        // Initially show only the About section
+        document.addEventListener("DOMContentLoaded", () => {
+            showSection("about");
+        });
+    </script>
+    <footer>
+        <p>&copy; 2024 Rwema. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
